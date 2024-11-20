@@ -5,22 +5,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gumbo | Find Recipes Using The Ingredients You Have at Home</title>
+    <meta name="description" content="Discover quick and delicious meals you can whip up with ingredients you already have. Turn your pantry staples into culinary masterpieces and join thousands ..."/>
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/scripts.js" defer></script>
+    <script src="scripts/scripts.js" defer></script> 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="assets/site.webmanifest" />
+    <!-- Monsterrat Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Roca Font -->
+    <link rel="stylesheet" href="https://use.typekit.net/izj5zlu.css">
 </head>
 
 <body>
     <!-- Leibrandt Start -->
     <header>
+        <a href="index.html">
+            <img src="assets/logo-small.svg" alt="Gumbo Logo">
+        </a>
+        <div class="search">
+            <input type="Search Recipes" placeholder="Search Recipes">
+         </div>  
+        <nav id="main-nav">
+            <a href="#discover">Discover</a>
+            <a href="#gumboPlus">Gumbo Plus</a>
+            <a href="#about">About</a>
+            <a href="#editorial">Editorial</a>
+            <a id="sign-up" href="#login">Log In/Sign Up</a>
+        </nav>
+        <div class="hamburgerMenu">
+
+        </div>
     </header>
     <main>
-        <section class="hero">
+        <section class="hero-section">
+            <h1 id="hero-motto-text">Budget-friendly, waste-free cooking.</h1>
+            <p id="her-sub-text">Find the perfect recipe using the ingredients you have at home.</p>
+            <button class="get-started-btn">Get Started</button>
+            <div id="hero-image-grid">
+                <img class="hero-image" src="images/hero/hero01.webp" alt="image of artisan pizza">
+                <img class="hero-image" src="images/hero/hero02.webp" alt="image of limes and greens">
+                <img class="hero-image" src="images/hero/hero03.webp" alt="image of cooked pears">
+                <img class="hero-image" src="images/hero/hero04.webp" alt="image of squash">
+                <img class="hero-image" src="images/hero/hero05.webp" alt="image of stuffed chicken">
+                <img class="hero-image" src="images/hero/hero06.webp" alt="image of tacos and avocado">
+                <img class="hero-image" src="images/hero/hero07.webp" alt="image of berry and nut milkshake">
+                <img class="hero-image" src="images/hero/hero08.webp" alt="image of prepping a cherry pie">
+                <img class="hero-image" src="images/hero/hero09.webp" alt="image of pancakes with banana">
+                <img class="hero-image" src="images/hero/hero10.webp" alt="image of cilantro">
+                <img class="hero-image" src="images/hero/hero11.webp" alt="image of burger with a knife in it">
+                <img class="hero-image" src="images/hero/hero12.webp" alt="image of assorted hot peppers">
+                <img class="hero-image" src="images/hero/hero13.webp" alt="image of colored lettuce">
+                <img class="hero-image" src="images/hero/hero14.webp" alt="image of walnuts">
+            </div>
         </section>
         <!-- Leibrandt End -->
         <!-- Muskan Start -->
         <section class="ingredients">
+            <h2>What's in your kitchen?</h2>
+            <p>Enter the items in your fridge and pantry</p>
+            <form id="form" role="search">
+                <input type="search" id="query" name="q"
+                 placeholder="Search by Ingredient"
+                 aria-label="Search Ingredients">
+                <button>Search</button>
+              </form>
+              <ul>
+                <li><p>Salt</p></li>
+                <li><p>Garlic</p></li>
+                <li><p>Milk</p></li>
+                <li><p>Eggs</p></li>
+                <li><p>Plain Flour</p></li>
+                <li><p>Butter</p></li>
+                <li><p>Rice</p></li>
+                <li><p>Lemons</p></li>
+                <li><p>Bread</p></li>
+                <li><p>Vegetable Oil</p></li>
+                <li><p>Red Chillies</p></li>
+                <li><p>Honey</p></li>
+                <li><p>Olive Oil</p></li>
+                <li><p>Granulated Sugar</p></li>
+                <li><p>Chicken Stock</p></li>
+                <li><p>Cucumbers</p></li>
+                <li><p>Spaghetti</p></li>
+                <li><p>Chopped Tomatoes</p></li>
+                <li><p>Apples</p></li>
+                <li><p>Parsley</p></li>
+                <li><p>Carrots</p></li>
+                <li><p>Bananas</p></li>
+                <li><p>Cheddar</p></li>
+                <li><p>Coconut Milk</p></li>
+                <li><p>Thyme</p></li>
+                <li><p>Broccoli</p></li>
+                <li><p>Tomatoes</p></li>
+              </ul>
+
         </section>
         <section class="recipes">
+            <h2>This weeks top trending recipes</h2>
+            <p>Based on popular searches</p>
+            <article>
+                <img src="images/delish-tuscan-butter-salmon-horizontal.jpg" alt="image of Tuscan Butter Salmon recipe by Delish" title="image of Tuscan Butter Salmon recipe by Delish">
+                <img src="images/Tesco-RFO-Chicken-Tomato-Spiced-Curry.jpg" alt="image of Chicken and Tomato Spiced Curry recipe by Tesco" title="image of Chicken and Tomato Spiced Curry recipe by Tesco">
+                <img src="images/CREAMY_PASTA_SHELLS_CHICKEN_SAGE_MUSHROOMS.jpg" alt="image of Creamy Chicken and Mushroom Pasta recipe by Delicious Magazine" title="image of Creamy Chicken and Mushroom Pasta recipe by Delicious Magazine">
+                <img src="images/recipe-image-legacy.jpg" alt="image of Chicken & Chorizo Jambalaya recipe by BBC Good Food" title="image of Chicken & Chorizo Jambalaya recipe by BBC Good Food">
+                <img src="images/Delicious_TakeAPack.jpg" alt="image of Turkey Bolognese Bake recipe by Delicious Magazine" title="image of Turkey Bolognese Bake recipe by Delicious Magazine">
+                <img src="images/Peach-Cobbler-13.jpg" alt="image of Peach Cobbler recipe by Tastes Better From Scratch" title="image of Peach Cobbler recipe by Tastes Better From Scratch">
+                <img src="images/pepper-steak.jpeg" alt="image of Pepper Steak Stir Fry recipe by Dinner at the Zoo" title="image of Pepper Steak Stir Fry recipe by Dinner at the Zoo">
+                <img src="images/paneerbuttermasala.jpeg" alt="image of Paneer Butter Masala recipe by Veg Recipes of India" title="image of Paneer Butter Masala recipe by Veg Recipes of India">
+                <img src="images/Mushroom&cauliflower.jpeg" alt="image of Mushroom & Cauliflower Penne recipe by Jamie Oliver" title="mage of Mushroom & Cauliflower Penne recipe by Jamie Oliver">
+                <img src="images/Mac&Cheese.jpg" alt="image of Mighty Mushroom Mac & Cheese recipe by Mob" title="image of Mighty Mushroom Mac & Cheese recipe by Mob">
+                <img src="images/pea-and-goats-cheese-linguine.jpg" alt="image of Pea and Goat's Cheese Linguine recipe by Co-op" title="image of Pea and Goat's Cheese Linguine recipe by Co-op">
+                <img src="images/oven-baked-spicy-chicken-tacos-6-of-14.jpg" alt="image of Baked Chicken Tacos recipe by The Cookie Rookie" title="image of Baked Chicken Tacos recipe by The Cookie Rookie">
+            </article>
+            <button>View More</button>
         </section>
         <!-- Muskan End -->
         <!-- Robin Start -->
@@ -256,8 +360,7 @@
                 <p>Site prepared by MOVING</p>
             </div>
         </div>
-    </footer>
-    <!-- Ian End -->
+ <!-- Ian End -->
 </body>
 
 </html>
