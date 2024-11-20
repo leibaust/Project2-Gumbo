@@ -4,3 +4,9 @@
 body {
   background-color: $bg-color;
 }
+
+a {
+  color: $secondary-color;
+    text-decoration: none;
+    font-family: $secondary-font;
+}
