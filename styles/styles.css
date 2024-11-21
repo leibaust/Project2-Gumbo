@@ -2,4 +2,10 @@ body {
   background-color: #FAF3CE;
 }
 
+a {
+  color: #5D0A0A;
+  text-decoration: none;
+  font-family: "roca", sans-serif;
+}
+
 /*# sourceMappingURL=styles.css.map */
