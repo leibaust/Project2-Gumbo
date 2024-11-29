@@ -20,13 +20,21 @@ a {
   font-size: 30px;
   cursor: pointer;
   z-index: 9999;
+  position: relative;
 }
 
 #main-nav {
   display: none;
 }
 
-@media (min-width: 1025px) {
+.nav-item {
+  border-style: solid;
+  border-width: 1px;
+  padding: 15px;
+  margin: 0;
+}
+
+@media (min-width: 525px) {
   .menu-icon {
     display: none;
   }
@@ -47,7 +55,7 @@ a {
   justify-content: center;
   align-items: center;
   transition: left 0.3s ease-in-out;
-  z-index: 1000;
+  z-index: 9998;
 }
 
 .menu ul {
@@ -71,6 +79,8 @@ a {
   left: 0;
 }
 
+// General Header Styling
+
 header {
   background-color: $brand-color;
   color: $secondary-color;
@@ -78,11 +88,25 @@ header {
   padding: 1rem;
 }
 
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1024px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.left-header {
+  display: flex;
+  align-items: center;
+}
+
 // Hero Images 235.53x750 px
 // 24px gaps
 .hero-image-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin: 0 auto;
   min-width: calc(235.53px * 7 + 24px * 6);
@@ -107,13 +131,13 @@ header {
 }
 
 
-// header {
-//   background-color: $brand-color;
-//   color: $secondary-color;
-//   font-family: $secondary-color;
-//   padding: 1rem;
-//   text-align: center;
-// }
+header {
+  background-color: $brand-color;
+  color: $secondary-color;
+  font-family: $secondary-color;
+  padding: 1rem;
+  text-align: center;
+}
 
 
 
