@@ -1,5 +1,8 @@
 body {
   background-color: #FAF3CE;
+  overflow-x: auto;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -32,8 +35,7 @@ a {
   left: -100%;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  color: white;
+  background-color: #fff435;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,7 +55,7 @@ a {
 }
 
 .menu a {
-  color: white;
+  color: #5D0A0A;
   text-decoration: none;
   font-size: 24px;
 }
@@ -74,16 +76,20 @@ header {
   grid-template-columns: repeat(7, 1fr);
   gap: 24px;
   margin: 0 auto;
+  min-width: 1792.71px;
 }
 
 .hero-image {
   width: 235.53px;
   height: 360px;
-  background-size: contain;
+  background-size: center;
   background-position: center;
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
+  border-radius: 30px;
   background-repeat: no-repeat;
+}
+
+#hero-motto-text {
+  font-family: "monsterrat", sans-serif;
 }
 
 /*# sourceMappingURL=styles.css.map */
