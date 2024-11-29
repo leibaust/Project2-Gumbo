@@ -1,11 +1,50 @@
 body {
   background-color: #FAF3CE;
+  margin: 0;
 }
 
 a {
   color: #5D0A0A;
   text-decoration: none;
   font-family: "roca", sans-serif;
+}
+
+.ingredients {
+  background-color: #fffff6;
+  padding: 44px 20px 50px;
+}
+
+.ingredients h2 {
+  color: #5D0A0A;
+  text-align: center;
+  font-size: 30px;
+  font-family: "monsterrat", sans-serif;
+  font-weight: 1000;
+  line-height: 32px;
+  letter-spacing: -0.1px;
+}
+
+#enter-item {
+  display: none;
+}
+
+input {
+  width: 280px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+input[type=search] {
+  padding: 12px 18px; /* Adjust as needed */
+  font-size: 1.3rem; /* Controls the size of the text */
+  font-family: "roca", sans-serif; /* Ensure your font is correct */
+  letter-spacing: 0; /* Keeps the spacing */
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+input[type=search]::placeholder {
+  color: #5D0A0A;
 }
 
 /*# sourceMappingURL=styles.css.map */

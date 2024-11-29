@@ -3,6 +3,7 @@
 
 body {
   background-color: $bg-color;
+  margin: 0;
 }
 
 a {
@@ -13,7 +14,38 @@ a {
 // Leib's section
 
 //Muskan's section
-
+.ingredients {
+  background-color: $ingredientbg;
+  padding: 44px 20px 50px;
+}
+.ingredients h2{
+  color: $secondary-color;
+  text-align: center;
+  font-size: 30px;
+  font-family: $main-font;
+  font-weight: 1000;
+  line-height: 32px;
+  letter-spacing: -.1px;
+}
+#enter-item{
+  display: none;
+}
+input{
+  width: 280px;
+  height: 50px;
+  border-radius: 25px;
+}
+input[type="search"]{
+  padding: 12px 18px; /* Adjust as needed */
+  font-size: 1.3rem; /* Controls the size of the text */
+  font-family: $secondary-font; /* Ensure your font is correct */
+  letter-spacing: 0; /* Keeps the spacing */
+  line-height: 1.5; 
+  font-weight: 300;
+}
+input[type="search"]::placeholder {
+  color: $secondary-color;
+}
 //Rob's section
 
 //Ian's section
