@@ -31,25 +31,38 @@
 </head>
 
 <body>
-    <!-- Leibrandt Start -->
-    <!-- sometp -->
+    <!-- Leibrandt Start --> 
     <header>
+<div class="header-content">
+    <div class="left-header">
         <a href="index.html">
-            <img src="assets/logo-small.svg" alt="Gumbo Logo">
+            <img id="logo-image" src="assets/logo-small.svg" alt="Gumbo Logo">
         </a>
         <div class="search">
             <input type="Search Recipes" placeholder="Search Recipes">
-         </div>  
+        </div>  
+    </div>
+    <div class="right-header">
         <nav id="main-nav">
-            <a href="#discover">Discover</a>
-            <a href="#gumboPlus">Gumbo Plus</a>
-            <a href="#about">About</a>
-            <a href="#editorial">Editorial</a>
-            <a id="sign-up" href="#login">Log In/Sign Up</a>
+            <a class="nav-item" href="#discover">Discover</a>
+            <a class="nav-item" href="#gumboPlus">Gumbo Plus</a>
+            <a class="nav-item" href="#about">About</a>
+            <a class="nav-item" href="#editorial">Editorial</a>
+            <a class="nav-item" id="sign-up" href="#login">Log In/Sign Up</a>
         </nav>
-        <div class="hamburgerMenu">
-
-        </div>
+        <div class="menu-icon" id="menuIcon"> 
+            &#9776; <!-- Hamburger icon --> 
+        </div> 
+        <nav class="menu" id="menu"> 
+            <ul> 
+                <li><a href="#">Home</a></li> 
+                <li><a href="#">About</a></li> 
+                <li><a href="#">Services</a></li> 
+                <li><a href="#">Contact</a></li> 
+            </ul> 
+        </nav>
+    </div>
+</div>
     </header>
     <main>
         <section class="hero-section">
@@ -74,6 +87,9 @@
             </div>
         </section>
         <!-- Leibrandt End -->
+         
+
+
         <!-- Muskan Start -->
         <section class="ingredients">
             <h2>What's in your kitchen?</h2>
@@ -185,11 +201,10 @@
                 <img src="images/oven-baked-spicy-chicken-tacos-6-of-14.jpg" alt="image of Baked Chicken Tacos recipe by The Cookie Rookie" title="image of Baked Chicken Tacos recipe by The Cookie Rookie">
             </article>
             <button>View More</button>
-        </section>
+        </section> -->
         <!-- Muskan End -->
         <!-- Robin Start -->
-        <section class="info-cards" id="info-cards">
-            
+        <section class="info-cards" id="info-cards">            
             <div class="card1" id="card1">
                 <img src="images/slide-1.webp" alt="Get weeknight dinner ideas" width="480" height="270">
                 <div class="text1" id="text1">
@@ -269,7 +284,7 @@
                 <img src="images/david-chang.jpg" width="300px" height="300px">
                 <img src="images/wolfgang-puck.jpg" width="300px" height="300px">
              </div>
-        </section>
+        </section> -->
         <!-- Robin End -->
         <!-- Ian Start -->
         <section id="about-container" class="about-container">
@@ -495,6 +510,7 @@
                 </a>
                 <p>Site prepared by MOVING</p>
             </div>
+
         </div>
         <!-- Ian End -->
 </body>
