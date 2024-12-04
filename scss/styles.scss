@@ -30,26 +30,12 @@ a {
   @include flexbox(column, center, center);
   @include border-style(1px solid $secondary-color, 1px solid $secondary-color);
   padding: 50px 16px 88px 18px;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // flex-direction: column;
-  // padding-top: 50px;
-  // padding-bottom: 88px;
   text-align: center;
   background-color: #fffff6;
-  // padding-left: 16px;
-  // padding-right: 18px;
-  // border-top: 1px solid $secondary-color;
-  // border-bottom: 1px solid $secondary-color;
 }
 
 .about-header {
   @include flexbox(column, center, center);
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
   padding: 0 13px;
   font-family: $main-font;
   color: $secondary-color;
@@ -80,27 +66,11 @@ a {
 
 .about-btn-1 button {
   @include button-style(18px, 4px 18px, $brand-color, 1px solid $secondary-color);
-  // position: relative;
-  // display: inline-block;
-  // cursor: pointer;
-  // outline: none;
-  // font-size: 18px;
-  // line-height: 24px;
-  // letter-spacing: -0.5px;
-  // font-weight: 400;
-  // text-transform: capitalize;
-  // font-family: $secondary-font;
-  // margin-inline: auto;
   margin-top: 32px;
   min-width: auto;
-  // padding-inline: 18px;
-  // padding-block: 4px;
-  // transition: all 0.3s ease-in-out;
 
   &.lead {
     color: $secondary-color;
-    // background: $brand-color;
-    // border: 1px solid $secondary-color;
     border-radius: 25px;
     transform-style: preserve-3d;
 
@@ -120,29 +90,11 @@ a {
     }
 
     @include button-hover-active($brand-color);
-    // &:hover {
-    //   background: $brand-color;
-    //   transform: translateY(5px);
-
-    //   &::before {
-    //     transform: translateY(5px);
-    //     transform: translate3d(0, 0, -0.5em);
-    //   }
-    // }
-
-    // &:active {
-    //   background: $brand-color;
-    //   transform: translate3d(0, 8px, -1.5em);
-    // }
   }
 }
 
 .about-content {
   @include flexbox(column, center, center);
-  // display: inline-flex;
-  // justify-content: center;
-  // align-items: center;
-  // flex-direction: column;
   background-color: $bg-color;
   padding: 67px 20px 50px 20px;
   border: 1px solid $secondary-color;
@@ -179,30 +131,14 @@ a {
 
 .about-btn-2 button {
   @include button-style(18px, 4px 18px, $brand-color, 1px solid $secondary-color);
-  // position: relative;
-  // display: inline-block;
-  // cursor: pointer;
-  // outline: none;
-  // font-size: 17px;
-  // line-height: 24px;
-  // letter-spacing: -0.7px;
-  // font-weight: 400;
-  // text-transform: capitalize;
-  // font-family: $secondary-font;
-  // margin-inline: auto;
   margin-top: 16px;
   min-width: auto;
   height: 2.5rem;
-  // padding-inline: 18px;
-  // padding-block: 4px;
   gap: 0.5rem;
-  // padding: 4px 18px;
-  // transition: all 0.3s ease-in-out;
 
   &.read {
     color: $secondary-color;
     background: $brand-color;
-    // border: 1px solid $secondary-color;
     border-radius: 50px;
     transform-style: preserve-3d;
 
@@ -222,30 +158,11 @@ a {
     }
 
     @include button-hover-active($brand-color);
-    
-    // &:hover {
-    //   background: $brand-color;
-    //   transform: translateY(5px);
-
-    //   &::before {
-    //     transform: translateY(5px);
-    //     transform: translate3d(0, 0, -0.5em);
-    //   }
-    // }
-
-    // &:active {
-    //   background: $brand-color;
-    //   transform: translate3d(0, 8px, -1.5em);
-    // }
   }
 }
 
 .testimonials-container {
   @include flexbox(column, center, center);
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
   color: $secondary-color;
   text-align: center;
   padding: 0 16px 0 16px;
@@ -401,14 +318,6 @@ a {
   font-family: $secondary-font;
   color: $secondary-color;
 }
-
-// .text-read {
-//   font-size: 20px;
-// }
-
-// .right-text {
-//   font-size: 20px;
-// }
 
 .ft-navbar {
   display: flex;
@@ -606,13 +515,9 @@ hr {
   }
 
   @keyframes scroll {
-    0% {
-      transform: translateX(0%);
-    }
+    0% {transform: translateX(0%);}
 
-    100% {
-      transform: translateX(-50%);
-    }
+    100% {transform: translateX(-50%);}
   }
 
   hr {
