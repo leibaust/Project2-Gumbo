@@ -34,29 +34,6 @@ p {
   text-align: center;
 }
 
-.main-buttons {
-  background-color: $brand-color; /* Yellow background */
-  border: none; /* Remove the default border */
-  color: $secondary-color; /* Maroon text */
-  font-family: $secondary-font;
-  padding: 10px 20px; /* Padding for the button */
-  text-align: center; /* Center the text */
-  text-decoration: none; /* Remove underline from text */
-  display: inline-block; /* Make the button inline-block */
-  font-size: 16px; /* Font size */
-  border-radius: 25px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor on hover */
-  box-shadow: 0 5px 0 0 $secondary-color; /* Offset the border using box-shadow */
-  transition: transform 0.1s, box-shadow 0.1s; /* Smooth transition */
-  width: 200px;
-}
-
-.main-buttons:hover {
-  box-shadow: 0 2px 0 0 $secondary-color; /* Slightly darker shadow on hover, reduced offset */
-  transform: translateY(3px); /* Move the button downwards */
-}
-
-
 // Hamburger Menu
 .menu-icon {
   font-size: 30px;
@@ -100,49 +77,6 @@ p {
   }
 }
 
-.menu {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: $bg-color;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  transition: left 0.3s ease-in-out;
-  z-index: 9998;
-}
-
-.menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
-.menu li {
-  margin: 20px 0;
-}
-
-.menu a {
-  color: $secondary-color;
-  text-decoration: none;
-  font-size: 24px;
-  font-family: $main-font;
-  font-weight: 800;
-}
-
-.menu.open {
-  left: 0;
-}
-
-.menu-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 // General Header Styling
 
 header {
@@ -158,6 +92,9 @@ header {
 
 #header-master {
   padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 10000;
 }
 
 .header-content {
@@ -267,6 +204,8 @@ header {
   transform: translateY(-150px);
   z-index: 7777;
   position: relative;
+  flex-shrink: 1;
+  
 }
 
 .hero-image {
@@ -278,6 +217,11 @@ header {
   background-repeat: no-repeat;
   border: 1px solid $secondary-color;
   object-fit: cover;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
 }
 
 
