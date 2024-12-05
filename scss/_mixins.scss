@@ -1,70 +1,53 @@
 @use 'variables' as *;
 
-// Leibrandt Mixins
-// Button Styling
-.main-buttons {
-    background-color: $brand-color;
-    border: none;
-    color: $secondary-color;
-    font-family: $secondary-font;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
+@mixin flexbox( $direction:column, $justify:center, $align:center ){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin button-style($font-size: 18px, $padding: 4px 18px, $bg-color: $brand-color, $border: 1px solid $secondary-color) {
+    position: relative;
     display: inline-block;
-    font-size: 16px;
-    border-radius: 25px;
     cursor: pointer;
-    box-shadow: 0 5px 0 0 $secondary-color;
-    transition: transform 0.1s, box-shadow 0.1s;
-    width: 200px;
+    outline: none;
+    font-size: $font-size;
+    line-height: 24px;
+    letter-spacing: -0.7px;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-family: $secondary-font;
+    margin-inline: auto;
+    padding: $padding;
+    transition: all 0.3s ease-in-out;
+    background: $bg-color;
+    border: $border;
+  }
+
+  @mixin button-hover-active($bg-color, $transform-hover: translateY(5px), $transform-hover-before: translateY(5px), $transform-active: translate3d(0, 8px, -1.5em)) {
     &:hover {
-		box-shadow: 0 2px 0 0 $secondary-color;
-		transform: translateY(3px);
-	}
-  }
-
-// Nav Item Styling
-.menu {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: $bg-color;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    transition: left 0.3s ease-in-out;
-    z-index: 9998;
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        text-align: center;
-      }
-    li {
-        margin: 20px 0;
-      }
-    a {
-        color: $secondary-color;
-        text-decoration: none;
-        font-size: 24px;
-        font-family: $main-font;
-        font-weight: 800;
-      }
-  }
-
-.menu.open {
-    left: 0;
-}
+      background: $bg-color;
+      transform: $transform-hover;
   
-.menu-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+      &::before {
+        transform: $transform-hover-before;
+        transform: translate3d(0, 0, -0.5em);
+      }
+    }
+  
+    &:active {
+      background: $bg-color;
+      transform: $transform-active;
+    }
+  }
 
-//Search Field Styling
+  @mixin border-style($top: 1px solid $secondary-color, $bottom: 1px solid $secondary-color) {
+    border-top: $top;
+    border-bottom: $bottom;
+  }
+// Leibrandt Mixins
+
 
 
 // End Leibrandt Mixins
