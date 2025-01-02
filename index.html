@@ -32,7 +32,7 @@
 
 <body>
     <!-- Leibrandt Start --> 
-    <header>
+    <header id="header-master">
 <div class="header-content">
     <div class="left-header">
         <a href="index.html">
@@ -48,17 +48,24 @@
             <a class="nav-item" href="#gumboPlus">Gumbo Plus</a>
             <a class="nav-item" href="#about">About</a>
             <a class="nav-item" href="#editorial">Editorial</a>
-            <a class="nav-item" id="sign-up" href="#login">Log In/Sign Up</a>
+            <span class="nav-item log-in-container">
+                <button id="log-in-btn">Log In/Sign Up</button>
+            </span>
         </nav>
         <div class="menu-icon" id="menuIcon"> 
             &#9776; <!-- Hamburger icon --> 
         </div> 
         <nav class="menu" id="menu"> 
-            <ul> 
-                <li><a href="#">Home</a></li> 
-                <li><a href="#">About</a></li> 
-                <li><a href="#">Services</a></li> 
-                <li><a href="#">Contact</a></li> 
+            <ul class="menu-list"> 
+                <div class="upper-menu">
+                    <li><a href="#">Discover</a></li> 
+                    <li><a href="#">Gumbo Plus</a></li> 
+                    <li><a href="#">About</a></li> 
+                    <li><a href="#">Editorial</a></li> 
+                </div>
+                <div>
+                    <li><button class="sign-up-btn main-buttons">Log In/Sign Up</button></li>
+                </div>
             </ul> 
         </nav>
     </div>
@@ -66,28 +73,33 @@
     </header>
     <main>
         <section class="hero-section">
+            <div class="header-text">
             <h1 id="hero-motto-text">Budget-friendly, waste-free cooking.</h1>
             <p id="her-sub-text">Find the perfect recipe using the ingredients you have at home.</p>
-            <button class="get-started-btn">Get Started</button>
+            <button class="get-started-btn main-buttons">Get Started</button>
+            </div>
+            <div class="hero-container">
             <div id="hero-image-grid">
-                <img class="hero-image" src="images/hero/hero01.webp" alt="image of artisan pizza">
-                <img class="hero-image" src="images/hero/hero02.webp" alt="image of limes and greens">
-                <img class="hero-image" src="images/hero/hero03.webp" alt="image of cooked pears">
-                <img class="hero-image" src="images/hero/hero04.webp" alt="image of squash">
-                <img class="hero-image" src="images/hero/hero05.webp" alt="image of stuffed chicken">
-                <img class="hero-image" src="images/hero/hero06.webp" alt="image of tacos and avocado">
-                <img class="hero-image" src="images/hero/hero07.webp" alt="image of berry and nut milkshake">
-                <img class="hero-image" src="images/hero/hero08.webp" alt="image of prepping a cherry pie">
-                <img class="hero-image" src="images/hero/hero09.webp" alt="image of pancakes with banana">
-                <img class="hero-image" src="images/hero/hero10.webp" alt="image of cilantro">
-                <img class="hero-image" src="images/hero/hero11.webp" alt="image of burger with a knife in it">
-                <img class="hero-image" src="images/hero/hero12.webp" alt="image of assorted hot peppers">
-                <img class="hero-image" src="images/hero/hero13.webp" alt="image of colored lettuce">
-                <img class="hero-image" src="images/hero/hero14.webp" alt="image of walnuts">
+                <img class="hero-image column-1" src="images/hero/hero01.webp" alt="image of artisan pizza">
+                <img class="hero-image column-2" src="images/hero/hero02.webp" alt="image of limes and greens">
+                <img class="hero-image column-3" src="images/hero/hero03.webp" alt="image of cooked pears">
+                <img class="hero-image column-4" src="images/hero/hero04.webp" alt="image of squash">
+                <img class="hero-image column-5" src="images/hero/hero05.webp" alt="image of stuffed chicken">
+                <img class="hero-image column-6" src="images/hero/hero06.webp" alt="image of tacos and avocado">
+                <img class="hero-image column-7" src="images/hero/hero07.webp" alt="image of berry and nut milkshake">
+                <img class="hero-image column-1" src="images/hero/hero08.webp" alt="image of prepping a cherry pie">
+                <img class="hero-image column-2" src="images/hero/hero09.webp" alt="image of pancakes with banana">
+                <img class="hero-image column-3" src="images/hero/hero10.webp" alt="image of cilantro">
+                <img class="hero-image column-4" src="images/hero/hero11.webp" alt="image of burger with a knife in it">
+                <img class="hero-image column-5" src="images/hero/hero12.webp" alt="image of assorted hot peppers">
+                <img class="hero-image column-6" src="images/hero/hero13.webp" alt="image of colored lettuce">
+                <img class="hero-image column-7" src="images/hero/hero14.webp" alt="image of walnuts">
+            </div>
             </div>
         </section>
         <!-- Leibrandt End -->
          
+
 
 
         <!-- Muskan Start -->
@@ -1582,6 +1594,7 @@
             </div>
 
         </div>
+
     </footer>
     <!-- Ian End -->
 

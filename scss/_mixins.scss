@@ -1,5 +1,6 @@
 @use "variables" as *;
 
+
 @mixin flexbox( $direction:column, $justify:center, $align:center ){
     display: flex;
     flex-direction: $direction;
@@ -19,7 +20,9 @@
     text-transform: capitalize;
     font-family: $secondary-font;
     margin-inline: auto;
+
     padding: $padding;
+
     transition: all 0.3s ease-in-out;
     background: $bg-color;
     border: $border;
@@ -45,4 +48,6 @@
   @mixin border-style($top: 1px solid $secondary-color, $bottom: 1px solid $secondary-color) {
     border-top: $top;
     border-bottom: $bottom;
+
   }
+
