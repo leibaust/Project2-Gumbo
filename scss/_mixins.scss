@@ -1,0 +1,53 @@
+@use "variables" as *;
+
+
+@mixin flexbox( $direction:column, $justify:center, $align:center ){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin button-style($font-size: 18px, $padding: 4px 18px, $bg-color: $brand-color, $border: 1px solid $secondary-color) {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    font-size: $font-size;
+    line-height: 24px;
+    letter-spacing: -0.7px;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-family: $secondary-font;
+    margin-inline: auto;
+
+    padding: $padding;
+
+    transition: all 0.3s ease-in-out;
+    background: $bg-color;
+    border: $border;
+  }
+
+  @mixin button-hover-active($bg-color, $transform-hover: translateY(5px), $transform-hover-before: translateY(5px), $transform-active: translate3d(0, 8px, -1.5em)) {
+    &:hover {
+      background: $bg-color;
+      transform: $transform-hover;
+  
+      &::before {
+        transform: $transform-hover-before;
+        transform: translate3d(0, 0, -0.5em);
+      }
+    }
+  
+    &:active {
+      background: $bg-color;
+      transform: $transform-active;
+    }
+  }
+
+  @mixin border-style($top: 1px solid $secondary-color, $bottom: 1px solid $secondary-color) {
+    border-top: $top;
+    border-bottom: $bottom;
+
+  }
+
