@@ -27,12 +27,6 @@ h1 {
 
 }
 
-p {
-  font-family: $secondary-font;
-  font-size: 1.5rem;
-  color: $secondary-color;
-  text-align: center;
-}
 // Hamburger Menu
 .menu-icon {
   font-size: 30px;
@@ -42,7 +36,7 @@ p {
 
 }
 
-p {
+#her-sub-text {
   font-family: $secondary-font;
   font-size: 1.5rem;
   color: $secondary-color;
@@ -763,7 +757,7 @@ input[type="search"]::placeholder {
 
 .ft-navbar {
   display: flex;
-  font-size: 20px;
+  font-size: 18px;
   font-family: $secondary-font;
 }
 
@@ -774,10 +768,20 @@ input[type="search"]::placeholder {
   flex: 1 1 0%;
 }
 
+.ft-navbar-left p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .ft-navbar-right {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.ft-navbar-right p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .inside-tag {
@@ -787,7 +791,7 @@ input[type="search"]::placeholder {
   gap: 10px;
 }
 
-.ft-logo {
+.ft-logo img {
   max-width: 100%;
   height: auto;
 }
@@ -816,6 +820,7 @@ hr {
 .ft-copyright {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 5px;
   font-size: 12px;
   font-family: $secondary-font;
@@ -973,6 +978,8 @@ hr {
   .middle-footer {
     display: flex;
     flex-direction: row;
+    height: 100%;
+    flex: 1;
   }
 
   #ft-left {
@@ -980,11 +987,11 @@ hr {
     flex-direction: column;
     border-right: solid 1px $secondary-color;
     border-bottom: solid 1px $secondary-color;
-    width: 882px;
+    width: 921px;
     height: 610px;
   }
 
-  .ft-right {
+  #ft-right {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -993,13 +1000,14 @@ hr {
     width: 50%;
     border-left-width: 2px;
     border-bottom: solid 1px $secondary-color;
+    margin-top: 44px;
   }
 
   .ft-middle-right {
     gap: 70px;
     display: flex;
     flex-direction: row;
-    padding-top: 72px;
+    // padding-top: 72px;
     padding-inline: 50px;
   }
 
@@ -1024,6 +1032,7 @@ hr {
   .ft-navbar {
     gap: 70px;
     font-size: 18px;
+    padding-top: 20px;
   }
 
   .ft-navbar-left {
@@ -1045,13 +1054,17 @@ hr {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 882px;
+    width: 921px;
     min-height: 56px;
     border-right: solid 1px $secondary-color;
-    padding-left: 130px;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: -0.11px;
+  }
+
+
+  .ft-condition p {
+    padding-left: 130px;
   }
 
   .ft-copyright {
