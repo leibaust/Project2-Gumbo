@@ -1,0 +1,228 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.site-footer {
+    display: block;
+    background-color: $brand-color;
+    text-align: left;
+    padding: 40px 24px;
+    font-family: $secondary-font;
+    color: $secondary-color;
+}
+
+.ft-navbar {
+    display: flex;
+    font-size: 18px;
+    font-family: $secondary-font;
+}
+
+.ft-navbar-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1 1 0%;
+}
+
+.ft-navbar-left a {
+    color: $secondary-color;
+    text-decoration: none;
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.ft-navbar-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ft-navbar-right a {
+    color: $secondary-color;
+    text-decoration: none;
+
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.inside-tag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.ft-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+hr {
+    border: 0.5px solid $secondary-color;
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
+
+.ft-bottom {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+}
+
+.ft-condition {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: $secondary-font;
+    font-size: 10px;
+    color: $secondary-color;
+}
+
+.ft-copyright {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    font-family: $secondary-font;
+
+    a {
+        color: $secondary-color;
+        text-decoration: none;
+    }
+}
+
+/* Start media query for Desktop
+---------------------------------------------- */
+
+@media screen and (min-width: 45em) {
+
+    .site-footer {
+        padding: 0;
+    }
+
+    .middle-footer {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        flex: 1;
+    }
+
+    #ft-left {
+        display: flex;
+        flex-direction: column;
+        border-right: solid 1px $secondary-color;
+        border-bottom: solid 1px $secondary-color;
+        width: 50%;
+        height: 610px;
+    }
+
+    #ft-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        padding-bottom: 2.5rem;
+        width: 50%;
+        // border-left-width: 2px;
+        border-bottom: solid 1px $secondary-color;
+        margin-top: 44px;
+    }
+
+    .ft-middle-right {
+        gap: 70px;
+        display: flex;
+        flex-direction: row;
+        padding-inline: 50px;
+    }
+
+    .text-read {
+        margin: 64px 4rem 0 4rem;
+        margin-inline: auto;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: -0.33px;
+        font-weight: 400;
+        width: 85%;
+        max-height: 120px;
+    }
+
+    .right-text {
+        max-width: 306px;
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 400;
+    }
+
+    .ft-navbar {
+        gap: 70px;
+        font-size: 18px;
+        padding-top: 20px;
+    }
+
+    .ft-navbar-left {
+        gap: 10px;
+        
+        a {
+            color: $secondary-color;
+            text-decoration: none;
+        }
+    }
+
+    .ft-navbar-right {
+
+        a {
+            color: $secondary-color;
+            text-decoration: none;
+        }
+
+    }
+
+    .ft-logo {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    .ft-bottom {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 0;
+    }
+
+    .ft-condition {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 50%;
+        min-height: 56px;
+        border-right: solid 1px $secondary-color;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: -0.11px;
+    }
+
+    .ft-condition p {
+        padding-left: 130px;
+    }
+
+    .ft-copyright {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 50%;
+        min-height: 56px;
+        padding-left: 56px;
+        gap: 5rem;
+        margin-top: 0;
+
+        a {
+            color: $secondary-color;
+            text-decoration: none;
+        }
+    }
+}

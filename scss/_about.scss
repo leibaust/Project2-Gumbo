@@ -1,0 +1,255 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.about-container {
+    @include flexbox(column, center, center);
+    @include border-style(1px solid $secondary-color, 1px solid $secondary-color);
+    padding: 50px 16px 88px 18px;
+    text-align: center;
+    background-color: #fffff6;
+}
+
+.about-header {
+    @include flexbox(column, center, center);
+    padding: 0 13px;
+    font-family: $main-font;
+    color: $secondary-color;
+
+    img {
+        background-color: transparent;
+        width: 180px;
+        height: 165px;
+        margin-left: 54px;
+        margin-right: 54px;
+    }
+}
+
+.about-header h2 {
+    font-size: 32px;
+    margin-top: 48px;
+    margin-bottom: 0;
+}
+
+.about-header p {
+    font-size: 22px;
+    font-family: $main-font;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: -0.15px;
+    margin-top: 10px;
+}
+
+.about-btn-1 button {
+    @include button-style(18px, 4px 18px, $brand-color, 1px solid $secondary-color);
+    margin-top: 32px;
+    min-width: auto;
+
+    &.lead {
+        color: $secondary-color;
+        border-radius: 25px;
+        transform-style: preserve-3d;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: $secondary-color;
+            border-radius: inherit;
+            transform: translate3d(0, 0.35em, -1em);
+            transition: all 0.3s ease-in-out;
+        }
+
+        @include button-hover-active($brand-color);
+    }
+}
+
+.about-content {
+    @include flexbox(column, center, center);
+    background-color: $bg-color;
+    padding: 67px 20px 50px 20px;
+    border: 1px solid $secondary-color;
+    border-radius: 20px;
+    min-width: 300px;
+    margin-top: 110px;
+
+    img {
+        width: 255px;
+        height: 255px;
+        object-fit: contain;
+        margin-bottom: 20px;
+    }
+}
+
+.text-header {
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 36px;
+    color: $secondary-color;
+    margin-bottom: 10px;
+}
+
+.text-up {
+    font-size: 26px;
+    color: $secondary-color;
+    margin-bottom: 15px;
+}
+
+.text-down {
+    font-size: 17px;
+    color: $secondary-color;
+}
+
+.about-btn-2 button {
+    @include button-style(18px, 4px 18px, $brand-color, 1px solid $secondary-color);
+    margin-top: 16px;
+    min-width: auto;
+    height: 2.5rem;
+    gap: 0.5rem;
+
+    &.read {
+        color: $secondary-color;
+        background: $brand-color;
+        border-radius: 50px;
+        transform-style: preserve-3d;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: $secondary-color;
+            border-radius: inherit;
+            transform: translate3d(0, 0.35em, -1em);
+            transition: all 0.3s ease-in-out;
+        }
+
+        @include button-hover-active($brand-color);
+    }
+}
+
+/* Start media query for Desktop
+---------------------------------------------- */
+
+@media screen and (min-width: 45em) {
+
+    .about-header p {
+        max-width: 1012px;
+        max-height: 126px;
+        font-size: 30px;
+        line-height: 42px;
+        font-weight: 400;
+        letter-spacing: -0.15px;
+    }
+
+    .about-btn-1 {
+        margin-top: 50px;
+        padding-inline: 41px;
+        padding-block: 8px;
+        margin-inline: auto;
+        width: auto;
+    }
+
+    #lead {
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -0.33px;
+        font-weight: 400;
+    }
+
+    .about-container {
+        padding: 112px 32px 140px 32px;
+    }
+
+    .about-content {
+        width: 1458px;
+        height: 713px;
+        padding-bottom: 105px;
+        padding-top: 103px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        padding-inline: 48px;
+        margin-inline: auto;
+        border-radius: 18px;
+        margin-left: 121px;
+        margin-right: 121px;
+        gap: 120px;
+
+        img {
+            width: 680px;
+            height: 503px;
+            inset: 0px;
+            object-fit: contain;
+            color: transparent;
+            margin-bottom: 0;
+        }
+    }
+
+    .about-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    .about-text {
+        gap: 36px;
+        max-width: 451px;
+        max-height: 496px;
+        text-align: left;
+        margin-top: 0;
+    }
+
+    .text-header {
+        font-size: 53px;
+        line-height: 54px;
+        font-weight: 800;
+        letter-spacing: -0.15px;
+        margin-bottom: 0;
+    }
+
+    .text-up {
+        font-size: 53px;
+        line-height: 54px;
+        font-weight: 400;
+        letter-spacing: -0.15px;
+        text-align: left;
+        margin-top: 0;
+    }
+
+    .text-down {
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 400;
+        letter-spacing: -0.05px;
+        padding-top: 25px;
+    }
+
+    .about-btn-2 {
+        align-self: flex-start;
+        padding-inline: 27px;
+        margin-inline: 0;
+        padding-block: 8px;
+        width: auto;
+        padding-top: 25px;
+        padding-left: 0;
+    }
+
+    #read {
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: -0.33px;
+        font-weight: 400;
+    }
+
+}

@@ -1,0 +1,202 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.testimonials-container {
+    @include flexbox(column, center, center);
+    color: $secondary-color;
+    text-align: center;
+    padding: 0 16px 0 16px;
+    background-color: #fffff6;
+    padding-top: 77px;
+    padding-bottom: 113px;
+}
+
+.testimonial-h2 {
+    font-family: $secondary-font;
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+.testimonial-h3 {
+    font-size: 26px;
+    margin-top: 10px;
+}
+
+.testimonial-list {
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+}
+
+.marquee-box {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100vw;
+    transform: none;
+}
+
+.child-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 0 0 auto;
+    transform: translateX(0%);
+    animation: scroll 55s linear infinite;
+    animation-play-state: running;
+    animation-delay: 0s;
+    animation-direction: normal;
+}
+
+.marquee-ani {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    margin-left: 3rem;
+    min-width: max-content;
+    margin-bottom: 1rem;
+}
+
+.marquee-item {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 302px;
+    min-height: 306px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: #ffe9b7;
+    box-shadow: 7px 7px 0 5px $secondary-color;
+}
+
+#intext {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 277px;
+    height: 206px;
+    padding: 42px 19px 0px 19px;
+}
+
+.rating {
+    display: flex;
+    justify-content: left;
+    padding-bottom: 5px;
+}
+
+.name {
+    padding-top: 35px;
+    padding-left: 19px;
+    text-align: left;
+}
+
+.marquee-item p {
+    font-family: $secondary-font;
+    font-size: 16px;
+    margin: 0;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-95%);
+    }
+}
+
+.marquee-container {
+    overflow: hidden;
+}
+
+.pl-container li {
+    list-style-type: disc;
+    color: $secondary-color;
+}
+
+.pl-container {
+    display: flex;
+    border: 1px solid $secondary-color;
+    height: 64px;
+    padding: 0;
+    margin: 0;
+}
+
+.marquee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fffff6;
+    width: 100%;
+    transform: translateX(0%);
+    animation: marquee 10s linear infinite;
+
+    span {
+        font-family: $secondary-color;
+        text-align: center;
+        font-size: 18px;
+        width: 300px;
+        display: inline-block;
+    }
+
+    span::before {
+        content: "•";
+        font-size: 16px;
+        margin-right: 12px;
+        display: inline-block;
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+/* Start media query for Desktop
+---------------------------------------------- */
+
+@media screen and (min-width: 45em) {
+
+    .testimonial-h2 {
+        font-size: 36px;
+    }
+
+    .testimonial-h3 {
+        font-size: 30px;
+    }
+
+    .child-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex: 0 0 auto;
+        transform: translateX(0%);
+        animation: scroll 30s linear infinite;
+        animation-play-state: running;
+        animation-delay: 0s;
+        animation-direction: normal;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    hr {
+        display: none;
+    }
+
+}
