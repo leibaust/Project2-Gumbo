@@ -32,7 +32,7 @@
 
 <body>
     <!-- Leibrandt Start --> 
-    <header>
+    <header id="header-master">
 <div class="header-content">
     <div class="left-header">
         <a href="index.html">
@@ -48,17 +48,24 @@
             <a class="nav-item" href="#gumboPlus">Gumbo Plus</a>
             <a class="nav-item" href="#about">About</a>
             <a class="nav-item" href="#editorial">Editorial</a>
-            <a class="nav-item" id="sign-up" href="#login">Log In/Sign Up</a>
+            <span class="nav-item log-in-container">
+                <button id="log-in-btn">Log In/Sign Up</button>
+            </span>
         </nav>
         <div class="menu-icon" id="menuIcon"> 
             &#9776; <!-- Hamburger icon --> 
         </div> 
         <nav class="menu" id="menu"> 
-            <ul> 
-                <li><a href="#">Home</a></li> 
-                <li><a href="#">About</a></li> 
-                <li><a href="#">Services</a></li> 
-                <li><a href="#">Contact</a></li> 
+            <ul class="menu-list"> 
+                <div class="upper-menu">
+                    <li><a href="#">Discover</a></li> 
+                    <li><a href="#">Gumbo Plus</a></li> 
+                    <li><a href="#">About</a></li> 
+                    <li><a href="#">Editorial</a></li> 
+                </div>
+                <div>
+                    <li><button class="sign-up-btn main-buttons">Log In/Sign Up</button></li>
+                </div>
             </ul> 
         </nav>
     </div>
@@ -66,28 +73,33 @@
     </header>
     <main>
         <section class="hero-section">
+            <div class="header-text">
             <h1 id="hero-motto-text">Budget-friendly, waste-free cooking.</h1>
             <p id="her-sub-text">Find the perfect recipe using the ingredients you have at home.</p>
-            <button class="get-started-btn">Get Started</button>
+            <button class="get-started-btn main-buttons">Get Started</button>
+            </div>
+            <div class="hero-container">
             <div id="hero-image-grid">
-                <img class="hero-image" src="images/hero/hero01.webp" alt="image of artisan pizza">
-                <img class="hero-image" src="images/hero/hero02.webp" alt="image of limes and greens">
-                <img class="hero-image" src="images/hero/hero03.webp" alt="image of cooked pears">
-                <img class="hero-image" src="images/hero/hero04.webp" alt="image of squash">
-                <img class="hero-image" src="images/hero/hero05.webp" alt="image of stuffed chicken">
-                <img class="hero-image" src="images/hero/hero06.webp" alt="image of tacos and avocado">
-                <img class="hero-image" src="images/hero/hero07.webp" alt="image of berry and nut milkshake">
-                <img class="hero-image" src="images/hero/hero08.webp" alt="image of prepping a cherry pie">
-                <img class="hero-image" src="images/hero/hero09.webp" alt="image of pancakes with banana">
-                <img class="hero-image" src="images/hero/hero10.webp" alt="image of cilantro">
-                <img class="hero-image" src="images/hero/hero11.webp" alt="image of burger with a knife in it">
-                <img class="hero-image" src="images/hero/hero12.webp" alt="image of assorted hot peppers">
-                <img class="hero-image" src="images/hero/hero13.webp" alt="image of colored lettuce">
-                <img class="hero-image" src="images/hero/hero14.webp" alt="image of walnuts">
+                <img class="hero-image column-1" src="images/hero/hero01.webp" alt="image of artisan pizza">
+                <img class="hero-image column-2" src="images/hero/hero02.webp" alt="image of limes and greens">
+                <img class="hero-image column-3" src="images/hero/hero03.webp" alt="image of cooked pears">
+                <img class="hero-image column-4" src="images/hero/hero04.webp" alt="image of squash">
+                <img class="hero-image column-5" src="images/hero/hero05.webp" alt="image of stuffed chicken">
+                <img class="hero-image column-6" src="images/hero/hero06.webp" alt="image of tacos and avocado">
+                <img class="hero-image column-7" src="images/hero/hero07.webp" alt="image of berry and nut milkshake">
+                <img class="hero-image column-1" src="images/hero/hero08.webp" alt="image of prepping a cherry pie">
+                <img class="hero-image column-2" src="images/hero/hero09.webp" alt="image of pancakes with banana">
+                <img class="hero-image column-3" src="images/hero/hero10.webp" alt="image of cilantro">
+                <img class="hero-image column-4" src="images/hero/hero11.webp" alt="image of burger with a knife in it">
+                <img class="hero-image column-5" src="images/hero/hero12.webp" alt="image of assorted hot peppers">
+                <img class="hero-image column-6" src="images/hero/hero13.webp" alt="image of colored lettuce">
+                <img class="hero-image column-7" src="images/hero/hero14.webp" alt="image of walnuts">
+            </div>
             </div>
         </section>
         <!-- Leibrandt End -->
          
+
 
 
         <!-- Muskan Start -->
@@ -224,72 +236,77 @@
             <button>View More</button>
         </section> -->
         <!-- Muskan End -->
+
         <!-- Robin Start -->
-
-        <section class="info-cards" id="info-cards">            
-            <div class="card1" id="card1">
-                <img src="images/slide-1.webp" alt="Get weeknight dinner ideas" width="480" height="270">
-                <div class="text1" id="text1">
-                    <h2>Get weeknight dinner ideas</h2>
-                    <h3>Tailored to your lifestyle</h3>
-                    <p>Take the work out of searching for weeknight dinner recipes. Get personalised meal
-                        recommendations from the world's best recipe websites in minutes.</p>
+        <section class="rcard-container" id="rcard-container">            
+            
+            <div id="rcard-content" class="rcard-content">
+                <div id="rcard-text" class="rcard-text">
+                    <p class="rcard-title">Get weeknight dinner ideas</p>
+                    <p class="rcard-title2">Tailored to your lifestyle</p>
+                    <p class="rcard-p">Take the work out of searching for weeknight dinner recipes. Get personalised meal recommendations from the world's best recipe websites in minutes.</p>
+                </div>
+                <div id="rcard-image" class="rcard-image">
+                    <img src="images/slide-1.webp" alt="Get weeknight dinner ideas">
                 </div>
             </div>
 
-            <div class="card2" id="card2">
-                <img src="images/slide-2.webp" alt="Create more of the food you love" width="360" height="270">
-                <div class="text2" id="text2">
-                    <h2>Create more of the food you love</h2>
-                    <h3>From the ingredients you already have</h3>
-                    <p>Discover quick and delicious meals you can whip up with ingredients you already have. Turn your
-                        pantry staples into culinary masterpieces and join thousands of Gumbo users on a journey to
-                        reduce food waste.</p>
+            <div id="rcard-content" class="rcard-content">
+                <div id="rcard-image" class="rcard-image">
+                    <img src="images/slide-2.webp" alt="Create more of the food you love" width="360" height="270">
+                </div>
+                <div id="rcard-text" class="rcard-text">
+                    <p class="rcard-title">Create more of the food you love</p>
+                    <p class="rcard-title2">From the ingredients you already have</p>
+                    <p class="rcard-p">Discover quick and delicious meals you can whip up with ingredients you already have. Turn your pantry staples into culinary masterpieces and join thousands of Gumbo users on a journey to reduce food waste.</p>
                 </div>
             </div>
 
-            <div class="card3" id="card3">
-                <img src="images/slide-3.webp" alt="Effortlessly plan meals" width="300" height="270">
-                <div class="text3" id="text3">
-                    <h2>Effortlessly plan meals</h2>
-                    <h3>With The ultimate kitchen partner</h3>
-                    <p>Whether you're cooking for the family, counting calories or just watching your budget, Gumbo
-                        brings millions of recipes to your fingertips.</p>
-                    <button class="account-button" id="account-button">Create Your Free Account
-                        <svg viewBox="0 0 18 17" xmlns="http://www.w3.org/2000/svg" class="w_18px h_17px fill_none">
-                            <path
-                                d="M10.1928 15.5C10.1928 12.151 13.7478 8.5 16.8818 8.5C13.7478 8.5 10.1928 4.847 10.1928 1.5"
-                                stroke="#5D0A0A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            </path>
-                            <path d="M16.9419 8.50781L1.33689 8.50781" stroke="#5D0A0A" stroke-width="1.5"
-                                stroke-miterlimit="10" stroke-linecap="round"></path>
-                        </svg>
-                    </button>
+            <div id="rcard-content" class="rcard-content">
+                <div id="rcard-text" class="rcard-text">
+                    <p class="rcard-title">Effortlessly plan meals</p>
+                    <p class="rcard-title2">With The ultimate kitchen partner</p>
+                    <p class="rcard-p">Whether you're cooking for the family, counting calories or just watching your budget, Gumbo brings millions of recipes to your fingertips.</p>
+                    <button class="get-started-btn main-buttons">Create Your Free Account</button>
                 </div>
-            </div>
+                <div id="rcard-image" class="rcard-image">
+                    <img src="images/slide-3.webp" alt="Effortlessly plan meals" width="300" height="270">
+                </div>
             </div>
         </section>
 
-        <section class="guides" id="guides">
-            <h2>Gumbo Guides</h2>
-            <h3>Discover something new</h3>
-            <div class="side-scroller1" id="side-scroller1">
-                <img src="images/baking-adventures.webp" width="300px" height="300px">
-                <img src="images/weeknight-dinners.webp" width="300px" height="300px">
-                <img src="images/air-fryer-recipes.webp" width="300px" height="300px">
-                <img src="images/easy-desserts.webp" width="300px" height="300px">
-                <img src="images/vegetarian-meals.webp" width="300px" height="300px">
-                <img src="images/slow-cooker-sensations.webp" width="300px" height="300px">
-                <img src="images/cocktail-mixology.webp" width="300px" height="300px">
-                <img src="images/comfort-food-classics.webp" width="300px" height="300px">
-                <img src="images/best-of-breakfast.webp" width="300px" height="300px">
+        <section class="swipers" id="swipers">
+
+            <div class="swiper-container" id="swiper-container">
+                <p class="swiper-title">Gumbo Guides</p>
+                <p class="swiper-title2">Discover something new</p>
+                <div class="swiper" id="swiper">
+
+                    <div class="image-table">
+                        <div class="image-cell">
+                            <img src="images/baking-adventures.webp" alt="Baking Adventures">
+                        </div>
+                        <div class="text-cell">
+                            <p>Baking Adventures</p>
+                        </div>
+                    </div>
+                
+                    <img src="images/weeknight-dinners.webp" width="300px" height="300px">
+                    <img src="images/air-fryer-recipes.webp" width="300px" height="300px">
+                    <img src="images/easy-desserts.webp" width="300px" height="300px">
+                    <img src="images/vegetarian-meals.webp" width="300px" height="300px">
+                    <img src="images/slow-cooker-sensations.webp" width="300px" height="300px">
+                    <img src="images/cocktail-mixology.webp" width="300px" height="300px">
+                    <img src="images/comfort-food-classics.webp" width="300px" height="300px">
+                    <img src="images/best-of-breakfast.webp" width="300px" height="300px">
+                </div>
             </div>
         </section>
 
-        <section class="chef-recipes" id="chef-recipes">
-            <h2>Browse by chef</h2>
-            <h3>All your favourite creators</h3>
-            <div class="side-scroller2" id="side-scroller2">
+        <section class="swiper-container" id="swiper-container">
+            <p class="swiper-title">Browse by chef</p>
+            <p class="swiper-title2">All your favourite creators</p>
+            <div class="swiper" id="swiper">
                 <img src="images/jamie-oliver.webp" width="300px" height="300px">
                 <img src="images/mary-berry.jpg" width="300px" height="300px">
                 <img src="images/gordon-ramsay.avif" width="300px" height="300px">
@@ -317,6 +334,7 @@
         </section>
 
         <!-- Robin End -->
+
         <!-- Ian Start -->
         <div id="about-container" class="about-container">
             <div id="about-header" class="about-header">
@@ -1582,6 +1600,7 @@
             </div>
 
         </div>
+
     </footer>
     <!-- Ian End -->
 
