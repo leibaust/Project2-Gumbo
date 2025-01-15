@@ -7,6 +7,12 @@
     justify-content: $justify;
     align-items: $align;
 }
+@mixin flexbox2( $direction, $justify, $align ){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
 
 @mixin button-style($font-size: 18px, $padding: 4px 18px, $bg-color: $brand-color, $border: 1px solid $secondary-color) {
     position: relative;
@@ -51,4 +57,8 @@
   }
   @mixin border-style2($border: 1px solid $secondary-color) {
     border: $border;
+  }
+
+  @mixin border-style3($bottom: 1px solid $secondary-color) {
+    border-bottom: $bottom;
   }
