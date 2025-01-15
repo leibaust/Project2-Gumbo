@@ -1,5 +1,9 @@
 @use "variables" as *;
 @use "mixins" as *;
+//Robin's section
+
+@use '_rcards';
+@use '_swipers';
 
 body {
   background-color: $bg-color;
@@ -348,10 +352,7 @@ input[type="search"]::placeholder {
 
 //-----------------------------------------------------------------------------------------------------
 
-//Robin's section
 
-@use '_rcards';
-@use '_swipers';
 
 
 //-----------------------------------------------------------------------------------------------------
