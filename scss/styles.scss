@@ -1,6 +1,6 @@
 @use "variables" as *;
 @use "mixins" as *;
-
+@use '_searchsection';
 body {
   background-color: $bg-color;
   height: 100vh;
@@ -313,53 +313,20 @@ header {
 
 
 //Muskan's section
-.ingredients {
-  background-color: $ingredientbg;
-  padding: 44px 20px 50px;
-}
-.ingredients h2{
-  color: $secondary-color;
-  text-align: center;
-  font-size: 30px;
-  font-family: $main-font;
-  font-weight: 1000;
-  line-height: 32px;
-  letter-spacing: -.1px;
-}
-#enter-item{
-  display: none;
-}
-input{
-  width: 280px;
-  height: 50px;
-  border-radius: 25px;
-}
-input[type="search"]{
-  padding: 12px 18px; /* Adjust as needed */
-  font-size: 1.3rem; /* Controls the size of the text */
-  font-family: $secondary-font; /* Ensure your font is correct */
-  letter-spacing: 0; /* Keeps the spacing */
-  line-height: 1.5; 
-  font-weight: 300;
-}
-input[type="search"]::placeholder {
-  color: $secondary-color;
-}
-
 //-----------------------------------------------------------------------------------------------------
 
 //Robin's section
 
 .rcard-container {
   @include flexbox(column, center, center); 
-  background-color: $brand-color;
+  background-color: $card-9;
   margin: 0 auto; 
   gap: 4.5rem;
 }
 
 .rcard-content {
   @include flexbox(row, center, center); 
-  @include border-style(1px solid $secondary-color, 1px solid $secondary-color);
+  @include border-style(1px solid $secondary-color,1px solid $secondary-color);
   padding: 6rem;
   border-radius: 1rem;
   background-color: $bg-color;
@@ -473,7 +440,7 @@ input[type="search"]::placeholder {
   @include border-style(1px solid $secondary-color, 1px solid $secondary-color);
   padding: 50px 16px 88px 18px;
   text-align: center;
-  background-color: #fffff6;
+  background-color: $ingredientbg;
 }
 
 .about-header {
