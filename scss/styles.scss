@@ -38,8 +38,11 @@ h1 {
   line-height: 1.2;
 
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 9d616489c018f8f0b5000a4f6d47e8b47c32041b
 // Hamburger Menu
 .menu-icon {
   font-size: 30px;
@@ -276,6 +279,11 @@ header {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 24px;
+<<<<<<< HEAD
+=======
+  margin: 0 auto;
+  width: 100%;
+>>>>>>> 9d616489c018f8f0b5000a4f6d47e8b47c32041b
   overflow-x: visible;
   overflow-y: visible;
 
@@ -320,6 +328,8 @@ header {
 .hero-section {
   display: flex;
   flex-direction: column;
+  position: relative; // Set positioning context for overlap
+  z-index: 1; // Ensure it’s below the ingredients section
 }
 
 
@@ -334,46 +344,211 @@ header {
 .column-4 {
   transform: translateY(300px);
 }
-
-
-
-
-//Muskan's section
+// Muskan
 .ingredients {
   background-color: $ingredientbg;
   padding: 44px 20px 50px;
+  position: relative; // Use relative for now to adjust overlap
+  margin-top: -150px; // Pull it upward into the hero section
+  z-index: 2; // Higher z-index to place it above the hero section
+  border-top: 1px solid $secondary-color; // Thin border at the top
+  border-bottom: 1px solid $secondary-color; // Thin border at the bottom
+  border-radius: 25px 25px 0 0; // Rounded top corners only
+
+  h2 {
+    color: $secondary-color;
+    text-align: center;
+    font-size: 30px;
+    font-family: $main-font;
+    font-weight: 1000;
+    line-height: 32px;
+    letter-spacing: -0.1px;
+  }
 }
-.ingredients h2{
-  color: $secondary-color;
-  text-align: center;
-  font-size: 30px;
-  font-family: $main-font;
-  font-weight: 1000;
-  line-height: 32px;
-  letter-spacing: -.1px;
-}
-#enter-item{
+
+#enter-item {
   display: none;
 }
-input{
-  width: 280px;
-  height: 50px;
-  border-radius: 25px;
+@media (min-width:768px){
+  #enter-item {
+    display: block;
+    margin-top:0px;
+  }
+  .ingredients{
+    h2{
+      margin-bottom: 0px;
+    }
+  }
 }
-input[type="search"]{
-  padding: 12px 18px; /* Adjust as needed */
-  font-size: 1.3rem; /* Controls the size of the text */
-  font-family: $secondary-font; /* Ensure your font is correct */
-  letter-spacing: 0; /* Keeps the spacing */
-  line-height: 1.5; 
-  font-weight: 300;
-}
-input[type="search"]::placeholder {
-  color: $secondary-color;
-}
+.search-bar {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    border: 1px solid $secondary-color; // Border color
+    border-radius: 25px; // Rounded edges for the entire bar
+    width: 100%; // Adjust width as needed
+    max-width: 800px; // Example: Set max width
+  
+    input[type="search"] {
+      flex: 1; // Input field takes up available space
+      padding: 12px;
+      border: none;
+      outline: none;
+      font-family: $secondary-font;
+      font-size: 2.5vh; // Matches background
+      color: $bg-color;
+      background-color: $ingredientbg;
+      border-radius: 45%;
+  
+      &::placeholder {
+        color: $secondary-color; // Placeholder text color
+      }
+    }
+  
+    .search-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px; // Button size
+      height: 40px; // Matches the width for a circular button
+      background-color: $brand-color; // Yellow background
+      cursor: pointer;
+      border: none;
+      border-radius: 50%;
+      margin: 5px;
 
-//-----------------------------------------------------------------------------------------------------
+      svg {
+        width: 24px; // Size of the SVG icon
+        height: 24px;
+        fill: $secondary-color; // Color of the SVG icon
+      }
+    }
+  }
+  .ingredient-list {
+    display: flex; // Arrange badges in a row
+    flex-wrap: wrap; // Wrap to the next line if needed
+    gap: 10px; // Space between badges
+    justify-content: center; // Center align the badges
+    padding: 20px;
+  }
+  
+  .ingredient-badge {
+    display: inline-flex; // Align icon and text in a row
+    align-items: center; // Vertically center-align icon and text
+    border: 1px solid $secondary-color; // Outline for each badge
+    border-radius: 25px; // Rounded edges
+    background-color: $ingredientbg; // Badge background
+    padding: 5px 15px; // Space inside the badge
+    font-family: $main-font;
+    font-size: 1rem; // Font size for the text
+    color: $secondary-color; // Text color
+    cursor: pointer; // Pointer cursor for interactivity
+    transition: background-color 0.3s, color 0.3s; // Smooth hover effects
+    width: auto;
 
+    svg {
+      width: 20px; // Icon size
+      height: 20px; // Match width for perfect circle
+      margin-right: 10px; // Space between icon and text
+    }
+  
+    .ingredient-text {
+      white-space: nowrap; // Prevent text from wrapping
+    }
+  }
+
+.recipes{
+    background-color: $trendingbg;
+    h2 {
+        color: $secondary-color;
+        text-align: center;
+        font-size: 30px;
+        font-family: $main-font;
+        font-weight: 1000;
+        line-height: 32px;
+        letter-spacing: -0.1px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+      }
+      p{
+        margin-top: 0px;
+      }
+}
+.recipe-cards {
+    display: grid; // Use grid for layout
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Responsive columns
+    gap: 20px; // Space between cards
+    padding: 20px;
+  }
+  
+  .card {
+    background-color: $ingredientbg; // Light background color
+    border: 1px solid $borderforcards; // Border color
+    border-radius: 15px; // Rounded corners
+    overflow: hidden; // Ensure content stays within the card
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Subtle shadow
+    transition: transform 0.3s ease, box-shadow 0.3s ease; // Smooth hover effects
+    cursor: pointer;
+    &:hover{
+        border-color: $secondary-color; 
+        .separator {
+            border-top-color: $secondary-color; // Change separator color
+          }
+    }
+    .card-image {
+      width: 100%; // Full width of the card
+      height: 200px; // Fixed height for consistency
+      overflow: hidden;
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; // Ensure the image scales properly
+      }
+    }
+  
+    .card-content {
+      
+      text-align: left; // Align text to the left
+  
+      .source-label {
+        font-size: 0.9rem;
+        color: $secondary-color; // Label text color
+        margin-bottom: 5px;
+        padding-top: 12px;
+      }
+  
+      .recipe-title {
+        font-size: 1.2rem;
+        font-family: $main-font; // Use your main font
+        color: $secondary-color; // Title color
+        margin: 5px 0;
+        text-align: left;
+        padding-left: 12px;
+        font-weight: 1000;
+
+        &:hover{
+            text-decoration: underline;
+        }
+      }
+  
+      .separator {
+        border: none;
+        border-top: 1px solid $borderforcards; // Add a thin line
+        margin: 10px 0; // Spacing around the line
+      }
+  
+      .meta-info {
+        font-weight: 400;
+        font-size: 0.75rem;
+        color: $secondary-color;
+      }
+      p{
+        text-align: left;
+        padding-left: 12px;
+      }
+    }
+  }
 //Robin's section
 
 .rcard-container {
@@ -385,7 +560,7 @@ input[type="search"]::placeholder {
 
 .rcard-content {
   @include flexbox(row, center, center); 
-  @include border-style2(1px solid $secondary-color);
+  @include border-style(1px solid $secondary-color,1px solid $secondary-color);
   padding: 6rem;
   border-radius: 1rem;
   background-color: $bg-color;
@@ -499,7 +674,7 @@ input[type="search"]::placeholder {
   @include border-style(1px solid $secondary-color, 1px solid $secondary-color);
   padding: 50px 16px 88px 18px;
   text-align: center;
-  background-color: #fffff6;
+  background-color: $ingredientbg;
 }
 
 .about-header {
