@@ -1,6 +1,7 @@
 @use "variables" as *;
 @use "mixins" as *;
-
+@use '_searchsection';
+@use '_trendingrecipe';
 body {
   background-color: $bg-color;
   height: 100vh;
@@ -25,13 +26,6 @@ h1 {
   text-align: center;
   line-height: 1.2;
 
-}
-
-p {
-  font-family: $secondary-font;
-  font-size: 1.5rem;
-  color: $secondary-color;
-  text-align: center;
 }
 // Hamburger Menu
 .menu-icon {
@@ -264,7 +258,7 @@ header {
   gap: 24px;
   margin: 0 auto;
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: visible;
   overflow-y: visible;
 }
 
@@ -294,6 +288,8 @@ header {
 .hero-section {
   display: flex;
   flex-direction: column;
+  position: relative; // Set positioning context for overlap
+  z-index: 1; // Ensure it’s below the ingredients section
 }
 
 
@@ -308,46 +304,6 @@ header {
 .column-4 {
   transform: translateY(300px);
 }
-
-
-
-
-//Muskan's section
-.ingredients {
-  background-color: $ingredientbg;
-  padding: 44px 20px 50px;
-}
-.ingredients h2{
-  color: $secondary-color;
-  text-align: center;
-  font-size: 30px;
-  font-family: $main-font;
-  font-weight: 1000;
-  line-height: 32px;
-  letter-spacing: -.1px;
-}
-#enter-item{
-  display: none;
-}
-input{
-  width: 280px;
-  height: 50px;
-  border-radius: 25px;
-}
-input[type="search"]{
-  padding: 12px 18px; /* Adjust as needed */
-  font-size: 1.3rem; /* Controls the size of the text */
-  font-family: $secondary-font; /* Ensure your font is correct */
-  letter-spacing: 0; /* Keeps the spacing */
-  line-height: 1.5; 
-  font-weight: 300;
-}
-input[type="search"]::placeholder {
-  color: $secondary-color;
-}
-
-//-----------------------------------------------------------------------------------------------------
-
 //Robin's section
 
 .rcard-container {
@@ -359,7 +315,7 @@ input[type="search"]::placeholder {
 
 .rcard-content {
   @include flexbox(row, center, center); 
-  @include border-style2(1px solid $secondary-color);
+  @include border-style(1px solid $secondary-color,1px solid $secondary-color);
   padding: 6rem;
   border-radius: 1rem;
   background-color: $bg-color;
@@ -473,7 +429,7 @@ input[type="search"]::placeholder {
   @include border-style(1px solid $secondary-color, 1px solid $secondary-color);
   padding: 50px 16px 88px 18px;
   text-align: center;
-  background-color: #fffff6;
+  background-color: $ingredientbg;
 }
 
 .about-header {
