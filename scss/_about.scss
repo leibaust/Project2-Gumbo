@@ -1,6 +1,12 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 .about-container {
     @include flexbox(column, center, center);
     @include border-style(1px solid $secondary-color, 1px solid $secondary-color);
@@ -170,28 +176,26 @@
     }
 
     .about-content {
-        width: 1458px;
-        height: 713px;
-        padding-bottom: 105px;
-        padding-top: 103px;
+        width: 100%;
+        // height: 713px;
+        max-width: 1458px;
+        min-width: 300px;
+        padding: 103px 48px 105px;
         display: flex;
         justify-content: flex-start;
         flex-direction: row-reverse;
         align-items: flex-start;
-        padding-inline: 48px;
         margin-inline: auto;
         border-radius: 18px;
-        margin-left: 121px;
-        margin-right: 121px;
-        gap: 120px;
+        gap: 20px;
 
         img {
             width: 680px;
             height: 503px;
             inset: 0px;
             object-fit: contain;
-            color: transparent;
-            margin-bottom: 0;
+            // color: transparent;
+            // margin-bottom: 0;
         }
     }
 
@@ -252,4 +256,17 @@
         font-weight: 400;
     }
 
+}
+
+@media screen and (min-width: 768px) {
+    .about-content {
+        padding: 103px 48px 105px; // 중간 화면 이상의 padding
+        gap: 60px; // 중간 화면 이상에서 간격 조정
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .about-content {
+        gap: 120px; // 데스크탑 이상에서 간격
+    }
 }

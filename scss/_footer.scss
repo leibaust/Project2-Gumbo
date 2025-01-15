@@ -56,8 +56,10 @@
 }
 
 .ft-logo img {
-    max-width: 100%;
-    height: auto;
+    max-width: 698px; 
+    max-height: 138.8px; 
+    width: 100%; 
+    height: auto;  
 }
 
 hr {
@@ -182,8 +184,8 @@ hr {
     }
 
     .ft-logo {
-        width: 100%;
-        height: auto;
+        max-width: 100%;
+        max-height: 138.8px;
         text-align: center;
     }
 
