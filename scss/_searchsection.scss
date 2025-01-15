@@ -1,10 +1,15 @@
 @use "variables" as *;
 @use "mixins" as *;
-@import 'variables';
 
 .ingredients {
   background-color: $ingredientbg;
   padding: 44px 20px 50px;
+  position: relative; // Use relative for now to adjust overlap
+  margin-top: -150px; // Pull it upward into the hero section
+  z-index: 2; // Higher z-index to place it above the hero section
+  border-top: 1px solid $secondary-color; // Thin border at the top
+  border-bottom: 1px solid $secondary-color; // Thin border at the bottom
+  border-radius: 25px 25px 0 0; // Rounded top corners only
 
   h2 {
     color: $secondary-color;
@@ -20,7 +25,17 @@
 #enter-item {
   display: none;
 }
-
+@media (min-width:768px){
+  #enter-item {
+    display: block;
+    margin-top:0px;
+  }
+  .ingredients{
+    h2{
+      margin-bottom: 0px;
+    }
+  }
+}
 .search-bar {
     margin: 0 auto;
     display: flex;
@@ -50,7 +65,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 50px; // Button size
+      width: 40px; // Button size
       height: 40px; // Matches the width for a circular button
       background-color: $brand-color; // Yellow background
       cursor: pointer;
@@ -63,5 +78,37 @@
         height: 24px;
         fill: $secondary-color; // Color of the SVG icon
       }
+    }
+  }
+  .ingredient-list {
+    display: flex; // Arrange badges in a row
+    flex-wrap: wrap; // Wrap to the next line if needed
+    gap: 10px; // Space between badges
+    justify-content: center; // Center align the badges
+    padding: 20px;
+  }
+  
+  .ingredient-badge {
+    display: inline-flex; // Align icon and text in a row
+    align-items: center; // Vertically center-align icon and text
+    border: 1px solid $secondary-color; // Outline for each badge
+    border-radius: 25px; // Rounded edges
+    background-color: $ingredientbg; // Badge background
+    padding: 5px 15px; // Space inside the badge
+    font-family: $main-font;
+    font-size: 1rem; // Font size for the text
+    color: $secondary-color; // Text color
+    cursor: pointer; // Pointer cursor for interactivity
+    transition: background-color 0.3s, color 0.3s; // Smooth hover effects
+    width: auto;
+
+    svg {
+      width: 20px; // Icon size
+      height: 20px; // Match width for perfect circle
+      margin-right: 10px; // Space between icon and text
+    }
+  
+    .ingredient-text {
+      white-space: nowrap; // Prevent text from wrapping
     }
   }
