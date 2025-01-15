@@ -264,7 +264,7 @@ header {
   gap: 24px;
   margin: 0 auto;
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: visible;
   overflow-y: visible;
 }
 
@@ -352,14 +352,14 @@ input[type="search"]::placeholder {
 
 .rcard-container {
   @include flexbox(column, center, center); 
-  background-color: $card-9;
+  background-color: $brand-color;
   margin: 0 auto; 
   gap: 4.5rem;
 }
 
 .rcard-content {
   @include flexbox(row, center, center); 
-  @include border-style2(1px solid $secondary-color);
+  @include border-style(1px solid $secondary-color, 1px solid $secondary-color);
   padding: 6rem;
   border-radius: 1rem;
   background-color: $bg-color;

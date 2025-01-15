@@ -48,7 +48,6 @@
   @mixin border-style($top: 1px solid $secondary-color, $bottom: 1px solid $secondary-color) {
     border-top: $top;
     border-bottom: $bottom;
+
   }
-  @mixin border-style2($border: 1px solid $secondary-color) {
-    border: $border;
-  }
+
