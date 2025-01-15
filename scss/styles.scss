@@ -1,13 +1,6 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-:root {
-  --base-font-size: 1vw; /* Base font size relative to viewport width */
-  --base-spacing: 1vw; /* Base spacing relative to viewport width */
-  --base-padding: 1vw; /* Base padding relative to viewport width */
-  --base-margin: 1vw; /* Base margin relative to viewport width */
-}
-
 body {
   background-color: $bg-color;
   height: 100vh;
@@ -22,11 +15,6 @@ a {
   font-family: $secondary-font;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-}
-
 // Leib's section
 
 h1 {
@@ -38,11 +26,6 @@ h1 {
   line-height: 1.2;
 
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 9d616489c018f8f0b5000a4f6d47e8b47c32041b
 // Hamburger Menu
 .menu-icon {
   font-size: 30px;
@@ -52,14 +35,11 @@ h1 {
 
 }
 
-#hero-sub-text {
+p {
   font-family: $secondary-font;
   font-size: 1.5rem;
   color: $secondary-color;
   text-align: center;
-  @media (max-width: 320px){
-    font-size: 1.2rem;
-  }
 }
 
 // Button Styling
@@ -90,8 +70,8 @@ h1 {
   position: fixed;
   top: 0;
   left: -100%;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: $bg-color;
   display: flex;
   flex-direction: row;
@@ -269,38 +249,17 @@ header {
 
 #hero-motto-text {
   font-family: $main-font;
-
-  @media (max-width: 320px){
-    font-size: 2.5rem;
-  }
 }
 
 #hero-image-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 24px;
-<<<<<<< HEAD
-=======
   margin: 0 auto;
   width: 100%;
->>>>>>> 9d616489c018f8f0b5000a4f6d47e8b47c32041b
   overflow-x: visible;
   overflow-y: visible;
-
-
-
-  // @media (min-width: 900px) {  
-
-    
-  //   margin: 0 auto;
-  //   width: 100%;
-  //   overflow-x: visible;
-  //   overflow-y: visible;}
-
 }
-
-
-
 
 .hero-container {
   display: flex;
