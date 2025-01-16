@@ -3,6 +3,7 @@
 
 .recipes{
     background-color: $trendingbg;
+    padding: 57px 16px;
     h2 {
         color: $secondary-color;
         text-align: center;
@@ -15,7 +16,7 @@
         margin-top: 0px;
       }
       p{
-        margin-top: 0px;
+        margin-top: 12px;
       }
 }
 .recipe-cards {
@@ -91,5 +92,10 @@
         text-align: left;
         padding-left: 12px;
       }
+    }
+  }
+  @media (min-width:1024px){
+    .recipes{
+      padding: 81px 32px;
     }
   }

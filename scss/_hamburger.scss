@@ -19,24 +19,7 @@
   
   // Button Styling
   .main-buttons {
-    background-color: $brand-color;
-    border: none;
-    color: $secondary-color;
-    font-family: $secondary-font;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 25px;
-    cursor: pointer;
-    box-shadow: 0 5px 0 0 $secondary-color;
-    transition: transform 0.1s, box-shadow 0.1s;
-    width: 200px;
-    &:hover {
-    box-shadow: 0 2px 0 0 $secondary-color;
-    transform: translateY(3px);
-  }
+    @include repeatbutton;
   }
   
   //Nav Styling
