@@ -1,0 +1,131 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+#hero-motto-text {
+    font-family: $main-font;
+    font-size: 2.5rem;
+  }
+
+#hero-sub-text {
+    font-size: 1.5rem;
+}
+
+  .column-2,
+  .column-3,
+  .column-4,
+  .column-5,
+  .column-6,
+  .column-7 {
+    display: none;
+  }
+
+  #hero-image-grid {
+    display: grid;
+    grid-template-columns: repeat (1, 1fr);
+    grid-template-rows: repeat (2, 1fr);
+    gap: 24px;
+    margin: 0 auto;
+    width: 100%;
+    overflow-x: visible;
+    overflow-y: visible;
+    transform: translateY(250px);
+  }
+
+  @media (min-width: 768px) {
+    .column-2,
+    .column-6 {
+      display: block;
+    }
+#hero-image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+    .column-3,
+    .column-5 {
+      display: block;
+    }
+
+    #hero-image-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      #hero-motto-text {
+        font-size: 3rem;
+      }
+}
+
+@media (min-width: 1200px) {
+    .column-4 {
+      display: block;
+    }
+
+    #hero-image-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+        #hero-motto-text {
+            font-size: 3.5rem;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        .column-7 {
+          display: block;
+        }
+    
+        #hero-image-grid {
+            grid-template-columns: repeat(7, 1fr);
+            transform: none;
+          }
+
+            #hero-motto-text {
+                font-size: 4rem;
+            }
+        }
+  
+
+  
+  .hero-container {
+    display: flex;
+    justify-content: center;
+    transform: translateY(-150px);
+    z-index: 7777;
+    position: relative;
+    width: 100%;
+  }
+  
+  .hero-image {
+    width: 298px;
+    height: 298px;
+    background-size: center;
+    background-position:center;
+    border-radius: 30px;
+    background-repeat: no-repeat;
+    border: 1px solid $secondary-color;
+    object-fit: cover;
+    width: 100%; 
+    min-width: 150px;
+    flex: 1 1 298px;
+  }
+  
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    position: relative; // Set positioning context for overlap
+    z-index: 1; // Ensure it’s below the ingredients section
+  }
+  
+  
+  .column-2, .column-6 {
+    transform: translateY(100px);
+  }
+  
+  .column-3, .column-5 {
+    transform: translateY(200px);
+  }
+  
+  .column-4 {
+    transform: translateY(300px);
+  }
