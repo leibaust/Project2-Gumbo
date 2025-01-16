@@ -177,7 +177,6 @@ html, body {
 
     .about-content {
         width: 100%;
-        // height: 713px;
         max-width: 1458px;
         min-width: 300px;
         padding: 103px 48px 105px;
@@ -194,8 +193,6 @@ html, body {
             height: 503px;
             inset: 0px;
             object-fit: contain;
-            // color: transparent;
-            // margin-bottom: 0;
         }
     }
 
@@ -260,13 +257,13 @@ html, body {
 
 @media screen and (min-width: 768px) {
     .about-content {
-        padding: 103px 48px 105px; // 중간 화면 이상의 padding
-        gap: 60px; // 중간 화면 이상에서 간격 조정
+        padding: 103px 48px 105px;
+        gap: 60px;
     }
 }
 
 @media screen and (min-width: 1200px) {
     .about-content {
-        gap: 120px; // 데스크탑 이상에서 간격
+        gap: 120px;
     }
 }

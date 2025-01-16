@@ -14,34 +14,19 @@
     display: flex;
     font-size: 18px;
     font-family: $secondary-font;
+    flex-wrap: wrap;
 }
 
-.ft-navbar-left {
+.ft-navbar-left, .ft-navbar-right {
     display: flex;
     flex-direction: column;
     gap: 10px;
     flex: 1 1 0%;
 }
 
-.ft-navbar-left a {
+.ft-navbar-left a, .ft-navbar-right a {
     color: $secondary-color;
     text-decoration: none;
-    p {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-}
-
-.ft-navbar-right {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.ft-navbar-right a {
-    color: $secondary-color;
-    text-decoration: none;
-
     p {
         margin-top: 0;
         margin-bottom: 0;
@@ -100,7 +85,7 @@ hr {
 /* Start media query for Desktop
 ---------------------------------------------- */
 
-@media screen and (min-width: 45em) {
+@media screen and (min-width: 700px) {
 
     .site-footer {
         padding: 0;
@@ -129,16 +114,27 @@ hr {
         gap: 10px;
         padding-bottom: 2.5rem;
         width: 50%;
-        // border-left-width: 2px;
         border-bottom: solid 1px $secondary-color;
         margin-top: 44px;
     }
 
-    .ft-middle-right {
-        gap: 70px;
+    #ft-middle-right {
         display: flex;
-        flex-direction: row;
-        padding-inline: 50px;
+        flex-direction: column;
+        padding-left: 10px;
+    }
+
+    .ft-navbar {
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .ft-navbar-left, .ft-navbar-right {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex: 1;
     }
 
     .text-read {
@@ -157,30 +153,6 @@ hr {
         font-size: 20px;
         line-height: 30px;
         font-weight: 400;
-    }
-
-    .ft-navbar {
-        gap: 70px;
-        font-size: 18px;
-        padding-top: 20px;
-    }
-
-    .ft-navbar-left {
-        gap: 10px;
-        
-        a {
-            color: $secondary-color;
-            text-decoration: none;
-        }
-    }
-
-    .ft-navbar-right {
-
-        a {
-            color: $secondary-color;
-            text-decoration: none;
-        }
-
     }
 
     .ft-logo {
@@ -227,4 +199,35 @@ hr {
             text-decoration: none;
         }
     }
+
+}
+
+@media screen and (min-width: 1000px) {
+
+    #ft-middle-right {
+        display: flex;
+        flex-direction: row;
+        padding-inline: 50px;
+        gap: 70px;
+    }
+
+    .ft-navbar {
+        gap: 70px;
+        font-size: 18px;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .ft-navbar-left, .ft-navbar-right {
+        flex-direction: column;
+        flex-grow: 1;
+        gap: 10px;
+        
+        a {
+            color: $secondary-color;
+            text-decoration: none;
+        }
+    }
+
 }
