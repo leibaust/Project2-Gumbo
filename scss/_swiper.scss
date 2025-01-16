@@ -7,6 +7,8 @@
     padding: 6rem;
     background-color: $bg-color;
     margin: 0 auto;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
   .swiper-title {
     font-family: $main-font;
@@ -22,6 +24,7 @@
     color: $secondary-color;
     text-align: center;
   }
+
   .swiper {
     display: flex;
     flex-direction: row;
@@ -32,6 +35,20 @@
     max-width: 95%;
     margin: 0 auto;
   }
+
+  @media (min-width: 45.8125rem ) {
+    .swiper {
+      display: flex;
+      flex-direction: row;
+      overflow: auto;
+      white-space: nowrap;
+      padding: 10px;
+      background-color: $bg-color;
+      max-width: 95%;
+      margin: 0 auto;
+    }
+  }
+
   .rimage-container {
     @include border-style2(1px solid $secondary-color);
     display: flex;
@@ -68,6 +85,7 @@
     flex-direction: column;
     border-radius: 1rem;
     overflow: hidden;
+    height: 100%;
   }
   .rimage-box2 {
     flex: 1;
@@ -85,6 +103,7 @@
     max-height: 225px;
     min-width: 300px;
     border-radius: 0.5rem;
+    min-height:302px;
   }
   .rtext-box2 {
     flex: 1;
@@ -106,6 +125,7 @@
     font-family: $secondary-font;
     font-size: 1.35rem;
     font-weight: 300;
+    transform: translateY(3px);
   }
   .word3 {
     font-family: $secondary-font;
