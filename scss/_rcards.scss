@@ -17,12 +17,15 @@
   flex-direction: column; 
   align-items: center;
   @include border-style2(1px solid $secondary-color);
-  padding: 6rem;
+
   border-radius: 1rem;
   background-color: $bg-color;
   margin: 0 auto;
   width: 80%;
   max-width: 1200px; 
+  padding-left: 1rem;
+  padding-right: 1rem;
+
 }
 
 .rcard-title {
@@ -30,7 +33,8 @@
   font-size: 2.5rem;
   font-weight: 800;
   color: $secondary-color;
-  text-align: center;  /* Centered by default */
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 .rcard-title2 {
@@ -38,7 +42,9 @@
   font-size: 2.25rem;
   font-weight: 200;
   color: $secondary-color;
-  text-align: center;  /* Centered by default */
+  text-align: center; 
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .rcard-p {
@@ -64,6 +70,7 @@
 
 @media (min-width: 1024px) { 
   .rcard-content {
+    padding: 6rem;
     flex-direction: row; 
     gap: 2rem; 
     .rcard-title, 
@@ -74,9 +81,10 @@
     .rcard-content img {
       max-width: 550px; 
     }
-  }
+    }
+    }
+
 
   #rcard-content-2 { 
     flex-direction: row-reverse; 
   }
-}
