@@ -78,10 +78,8 @@
     padding: 0.5rem;
   }
   .rimage-container2 {
-    @include border-style2(1px solid $secondary-color);
     display: flex;
     flex-direction: column;
-    border-radius: 1rem;
     overflow: hidden;
     height: 100%;
   }
@@ -91,7 +89,6 @@
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    border-radius: 1rem;
   }
   .rimage2 {
     @include border-style2(1px solid $secondary-color);
@@ -135,4 +132,70 @@
     font-family: $main-font;
     font-size: 1rem;
     font-weight: 550;
+  }
+  #rtext-box-2{
+    background-color: $card-1;
+  }
+  #rtext-box-3, #rtext-box-12{
+    background-color: $card-2;
+  }
+  #rtext-box-1, #rtext-box-8{
+    background-color: $card-3;
+  }
+  #rtext-box-4{
+    background-color: $card-9;
+  }
+  #rtext-box-5{
+    background-color: $card-4;
+  }
+  #rtext-box-6{
+    background-color: $card-5;
+  }
+  #rtext-box-7{
+    background-color: $card-10;
+  }
+  #rtext-box-9{
+    background-color: $card-7;
+  }
+  #rtext-box-10{
+    background-color: $card-11;
+  }
+  #rtext-box-11{
+    background-color: $card-10;
+  }
+  .rimage-container2{
+    background-color: $card-2;
+    @include borderradius(1rem);
+  }
+  .rimage-container3{
+    background-color: $card-12;
+    @include borderradius(1rem);
+  }
+  .rimage-container4{
+    background-color: $card-4;
+    @include borderradius(1rem);
+  }
+  .rimage-container5{
+    background-color: $card-1;
+    @include borderradius(1rem);
+  }
+  .rimage-container6{
+    background-color: $card-13;
+    @include borderradius(1rem);
+  }
+  .rimage-container7{
+    background-color: $card-9;
+    @include borderradius(1rem);
+  }
+  .rimage-container8{
+    background-color: $card-14;
+    @include borderradius(1rem);
+  }
+  .rimage-container9{
+    background-color: $card-15;
+    @include borderradius(1rem);
+  }
+  .swiper-slide{
+    @include border-style2(1px solid $secondary-color);
+    border-radius: 1rem;
   }
