@@ -94,6 +94,10 @@
       }
     }
   }
+  .Viewmore {
+    display: block; // Ensures the button behaves as a block element
+    margin: 0 auto;
+  }
   @media (min-width:1024px){
     .recipes{
       padding: 81px 32px;
