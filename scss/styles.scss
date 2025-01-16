@@ -351,183 +351,159 @@ input[type="search"]::placeholder {
 //Robin's section
 
 .rcard-container {
-  @include flexbox(column, center, center); 
+  @include flexbox(column, center, center);
   background-color: $card-9;
-  margin: 0 auto; 
+  margin: 0 auto;
   gap: 4.5rem;
 }
-
 .rcard-content {
-  @include flexbox(row, center, center); 
+  @include flexbox(row, center, center);
   @include border-style2(1px solid $secondary-color);
   padding: 6rem;
   border-radius: 1rem;
   background-color: $bg-color;
   max-width: 70%;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
-  
 .rcard-title {
-  font-family: $main-font; 
+  font-family: $main-font;
   font-size: 2.5rem;
   font-weight: 800;
-  color: $secondary-color; 
+  color: $secondary-color;
   text-align: left;
 }
-
 .rcard-title2 {
-  font-family: $secondary-font; 
+  font-family: $secondary-font;
   font-size: 2.25rem;
   font-weight: 200;
-  color: $secondary-color; 
+  color: $secondary-color;
   text-align: left;
 }
-
 .rcard-p {
   font-family: $main-font;
   font-size: 1rem;
   font-weight: 400;
-  color: $secondary-color; 
+  color: $secondary-color;
   text-align: left;
 }
-
 .rcard-content img {
   width: 500px;
   height: 500px;
   object-fit: contain;
   color: transparent;
 }
-
 .swiper-container {
-  @include flexbox(column, center, center); 
+  @include flexbox(column, center, center);
   @include border-style(1px solid $secondary-color, 1px solid $secondary-color);
   padding: 6rem;
   background-color: $bg-color;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
-
 .swiper-title {
-  font-family: $main-font; 
+  font-family: $main-font;
   font-size: 1.75rem;
   font-weight: 800;
-  color: $secondary-color; 
+  color: $secondary-color;
   text-align: center;
 }
-
 .swiper-title2 {
-  font-family: $secondary-font; 
+  font-family: $secondary-font;
   font-size: 1.75rem;
   font-weight: 300;
-  color: $secondary-color; 
+  color: $secondary-color;
   text-align: center;
 }
-
 .swiper {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   overflow: auto;
   white-space: nowrap;
   padding: 10px;
   background-color: $bg-color;
   max-width: 95%;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
-
 .rimage-container {
-  @include border-style2(1px solid $secondary-color); 
+  @include border-style2(1px solid $secondary-color);
   display: flex;
-  flex-direction: column; 
-
+  flex-direction: column;
   border-radius: 1rem;
   overflow: hidden;
 }
-
 .rimage-box {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
-
 .rimage {
   @include border-style3(1px solid $secondary-color);
-  width: 100%; 
+  width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
   max-height: 225px;
   min-width: 300px;
 }
-
 .rtext-box {
   flex: 1;
   display: flex;
   flex-direction: row;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
   color: $secondary-color;
   padding: 0.5rem;
 }
-
 .rimage-container2 {
-  @include border-style2(1px solid $secondary-color); 
+  @include border-style2(1px solid $secondary-color);
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   border-radius: 1rem;
   overflow: hidden;
 }
-
 .rimage-box2 {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem; 
+  padding: 1rem;
   border-radius: 1rem;
 }
-
 .rimage2 {
   @include border-style2(1px solid $secondary-color);
-  width: 100%; 
+  width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
   max-height: 225px;
   min-width: 300px;
   border-radius: 0.5rem;
 }
-
 .rtext-box2 {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
   color: $secondary-color;
-  padding: 0.5rem; 
+  padding: 0.5rem;
   padding-bottom: 4rem;
 }
-
-
 .word1 {
   font-family: $main-font;
   font-size: 1.35rem;
   font-weight: 800;
   margin-right: 0.25rem;
 }
-
 .word2 {
   font-family: $secondary-font;
   font-size: 1.35rem;
   font-weight: 300;
 }
-
 .word3 {
   font-family: $secondary-font;
   font-size: 1.35rem;
   font-weight: 300;
   margin-right: 0.25rem;
 }
-
 .word4 {
   font-family: $main-font;
   font-size: 1rem;
