@@ -1,5 +1,21 @@
-@use 'variables' as *;
+@use "variables" as *;
+@use "mixins" as *;
+//leib's sections/partials
+@use 'header';
+@use 'hamburger';
+@use 'hero';
+@use 'general';
 
-body {
-  background-color: $bg-color;
-}
+// Muskan
+@use 'search';
+@use 'recipes';
+
+//Ian's section
+@use 'about';
+@use 'testimonial';
+@use 'footer';
+
+
+//Robin's section
+@use 'rcards';
+@use 'swiper';

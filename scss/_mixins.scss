@@ -1,0 +1,82 @@
+@use "variables" as *;
+
+
+@mixin flexbox( $direction, $justify, $align ){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin flexbox2( $direction, $justify, $align ){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin button-style($font-size, $padding, $bg-color, $border) {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    font-size: $font-size;
+    line-height: 24px;
+    letter-spacing: -0.7px;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-family: $secondary-font;
+    margin-inline: auto;
+    padding: $padding;
+    transition: all 0.3s ease-in-out;
+    background: $bg-color;
+    border: $border;
+  }
+
+  @mixin button-hover-active($bg-color) {
+    &:hover {
+      background: $bg-color;
+      transform: translateY(5px);
+  
+      &::before {
+        transform: translateY(5px);
+        transform: translate3d(0, 0, -0.5em);
+      }
+    }
+  
+    &:active {
+      background: $bg-color;
+      transform: translate3d(0, 8px, -1.5em);
+    }
+  }
+
+  @mixin border-style($top, $bottom) {
+    border-top: $top;
+    border-bottom: $bottom;
+
+  }
+  @mixin border-style2($border) {
+    border: $border;
+  }
+  @mixin border-style3($bottom) {
+    border-bottom: $bottom;
+  }
+  @mixin repeatbutton {
+    background-color: $brand-color;
+    border: none;
+    color: $secondary-color;
+    font-family: $secondary-font;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 5px 0 0 $secondary-color;
+    transition: transform 0.1s, box-shadow 0.1s;
+    width: 200px;
+    &:hover {
+      box-shadow: 0 2px 0 0 $secondary-color;
+      transform: translateY(3px);
+    }
+  }
