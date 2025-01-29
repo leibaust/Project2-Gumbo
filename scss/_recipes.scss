@@ -21,11 +21,14 @@
 }
 .recipe-cards {
     display: grid; // Use grid for layout
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Responsive columns
     gap: 20px; // Space between cards
     padding: 20px;
   }
-  
+  @media (min-width:425px){
+    .recipe-cards {
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  }
+}
   .card {
     background-color: $ingredientbg; // Light background color
     border: 1px solid $borderforcards; // Border color
@@ -93,6 +96,10 @@
         padding-left: 12px;
       }
     }
+  }
+  .Viewmore {
+    display: block; // Ensures the button behaves as a block element
+    margin: 0 auto;
   }
   @media (min-width:1024px){
     .recipes{
